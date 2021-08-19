@@ -1,13 +1,26 @@
 /*
 Author: Sullivan Young
 Description: CSS for my personal website
-Date Edited: 8/18/2020
+Date Edited: 8/19/2020
 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.whole {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+}
 
 h1{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 36px;
-    margin-top: 10em;
+    font-size: 100px;
+    position: absolute;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -15,17 +28,18 @@ h1{
     color: white;
     background: linear-gradient(rgb(255, 254, 254), rgb(110, 110, 110));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    text-shadow: 6px 6px 0px rgba(185, 185, 185, 0.2);
 
     display:block;
-    position: relative;
+    position:relative;
     z-index: 3;
 }
 
-@keyframes move-stars {
-    from{background-position: 0 0;}
-    to{background-position: -10000px 5000px;}
+@keyframes move-twinkle {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
 }
 
 .stars, .twinkle{
@@ -41,22 +55,55 @@ h1{
 
 .stars{
     background: #000 url(images/stars.png) repeat top center;
-    z-index: 0;
+    z-index:0;
 }
 
 .twinkle{
     background: transparent url(images/twinkle.png) repeat top center;
-    z-index: 1;
-    animation: move-stars 200s linear infinite;
+    z-index:1;
+    animation: move-twinkle 200s linear infinite;
 }
 
-.background{
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
+.line {
+    border-bottom: 2px solid rgb(245, 245, 245);
+    color: linear-gradient(rgb(255, 254, 254), rgb(110, 110, 110));
+    width: 880px;
+    margin: auto;
+    max-width:100%;
+    text-align: center;
+    font-size: 100vh;
+    padding-top: 50px;
+    display:block;
+    position:relative;
+    z-index: 3;
+}
+
+.format {
+    padding-top: 25px;
+    height: auto;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(black,#1f1f1f,#585757,#969696);
+    margin: auto;
+    max-width:100%;
+    display: flex;
+    justify-content: space-evenly
+}
+
+i{
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    color: rgb(218, 218, 218);
+    padding: 0 0 50px 0;
+    font-size: 80px;
+}
+
+i:hover{
+    color:rgb(99, 99, 99);
+}
+
+a{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
