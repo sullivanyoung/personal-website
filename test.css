@@ -65,8 +65,10 @@ button:hover{
 img{
     border-radius: 50%;
     position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 120px;
+    height: 120px;
     z-index: 1;
 }
 

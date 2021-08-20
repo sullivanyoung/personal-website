@@ -79,18 +79,19 @@ h1{
 }
 
 .format {
-    padding-top: 25px;
+    padding-top: 50px;
     height: auto;
     width: 100%;
     margin: auto;
     max-width:100%;
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
 i{
     position: relative;
     z-index: 3;
+    height: 35px;
     max-width: 100%;
     color: rgb(218, 218, 218);
     padding: 0 0 50px 0;
@@ -101,9 +102,50 @@ i:hover{
     color:rgb(58, 58, 58);
 }
 
+nav{
+    width: 100vw;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    height: 85px;
+    width: 120px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+
+li>span{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+li>span:nth-child(1){
+    color: #5f5f5f;
+    font-size: 32px;
+}
+
+li>span:nth-child(2){
+    background-color: #555555;
+}
+
+li:hover span{
+    transform: translateY(-100%);
+}
+
 a{
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    color:white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
 }
